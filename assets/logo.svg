@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="150" viewBox="0 0 480 150" role="img" aria-label="Lumen — read without the noise">
+  <title>Lumen — read without the noise</title>
+  <rect x="1" y="1" width="478" height="148" rx="22" fill="#f4ecdc" stroke="#e2d5ba" stroke-width="1"/>
+  <g transform="translate(34 33)">
+    <rect width="84" height="84" rx="18.7" fill="#1a1713"/>
+    <rect x="19.7" y="27.3" width="43.7" height="6" rx="3" fill="#f4ecdc"/>
+    <rect x="19.7" y="38.2" width="33.2" height="6" rx="3" fill="#f4ecdc"/>
+    <rect x="19.7" y="49.1" width="38.2" height="6" rx="3" fill="#e29a4a"/>
+  </g>
+  <text x="146" y="77" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" letter-spacing="2.5" fill="#1a1713">LUMEN</text>
+  <text x="148" y="105" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" letter-spacing="2" fill="#8a7a60">READ WITHOUT THE NOISE</text>
+</svg>
