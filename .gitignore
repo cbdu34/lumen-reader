@@ -1,0 +1,12 @@
+node_modules/
+dist/
+
+# Rendered by `npm run icons`; only needed for a Web Store package.
+icons/
+*.zip
+*.crx
+*.pem
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

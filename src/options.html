@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="mark" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="titles">
+      <h1>Lumen</h1>
+      <p>A calm, typographic reader for the web. <span id="version" class="version"></span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="defaults-title">
+      <h2 id="defaults-title">Reading defaults</h2>
+      <p class="lede">Applied every time you open the reader. You can still change them on the fly with the toolbar buttons.</p>
+
+      <div class="row">
+        <div class="row-label">
+          <label for="theme">Theme</label>
+          <p>Sepia is warm, Light is neutral, Ink is for dark rooms.</p>
+        </div>
+        <div class="row-control">
+          <select id="theme">
+            <option value="sepia">Sepia</option>
+            <option value="light">Light</option>
+            <option value="dark">Ink (dark)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-label">
+          <label for="fontSize">Text size</label>
+          <p>The body text size, in pixels.</p>
+        </div>
+        <div class="row-control">
+          <input type="range" id="fontSize" min="15" max="30" step="1">
+          <output id="fontSizeOut" for="fontSize">19 px</output>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-label">
+          <label for="measure">Line length</label>
+          <p>Characters per line. 60&ndash;75 is the comfortable range.</p>
+        </div>
+        <div class="row-control">
+          <input type="range" id="measure" min="44" max="92" step="1">
+          <output id="measureOut" for="measure">68 ch</output>
+        </div>
+      </div>
+
+      <div class="preview" id="preview" data-theme="sepia">
+        <h3 class="preview-title">The quiet web</h3>
+        <p class="preview-meta">Ada Lovelace &middot; example.com &middot; 4 min read</p>
+        <p>Reading on the web is a design problem before it is a technological one. Strip the page to its sentences, give them a measure and a rhythm, and attention does the rest.</p>
+        <p>Lumen keeps the words, drops the noise, and never asks for an account.</p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="keys-title">
+      <h2 id="keys-title">Keyboard</h2>
+      <table class="keys">
+        <tbody>
+          <tr><th scope="row"><kbd>Alt</kbd> + <kbd>R</kbd></th><td>Open or close the reader on the current tab</td></tr>
+          <tr><th scope="row"><kbd>Esc</kbd></th><td>Close the reader</td></tr>
+          <tr><th scope="row"><kbd>+</kbd> / <kbd>&minus;</kbd></th><td>Text size</td></tr>
+          <tr><th scope="row"><kbd>W</kbd></th><td>Cycle the column width</td></tr>
+          <tr><th scope="row"><kbd>T</kbd></th><td>Cycle the theme</td></tr>
+          <tr><th scope="row"><kbd>E</kbd></th><td>Export the article as Markdown</td></tr>
+          <tr><th scope="row"><kbd>?</kbd></th><td>Show the shortcut panel</td></tr>
+        </tbody>
+      </table>
+      <button class="ghost" id="shortcuts" type="button">Rebind shortcuts</button>
+    </section>
+
+    <section class="card" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy</h2>
+      <ul class="list">
+        <li><strong>No network calls.</strong> Lumen never sends anything anywhere. There is no analytics, no sync server, no crash reporting.</li>
+        <li><strong>No host permissions.</strong> Lumen cannot read any page until you click its button on that page, thanks to <code>activeTab</code>.</li>
+        <li><strong>Local storage only.</strong> Your theme, text size and column width live in <code>chrome.storage.sync</code>, which Chrome may sync between your own devices.</li>
+        <li><strong>No accounts.</strong> Nothing to sign up for.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <button class="ghost" id="reset" type="button">Restore defaults</button>
+    <span class="status" id="status" role="status" aria-live="polite"></span>
+  </footer>
+
+  <script src="options.js"></script>
+</body>
+</html>

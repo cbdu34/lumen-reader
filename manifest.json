@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Lumen — Distraction-Free Reader",
+  "short_name": "Lumen",
+  "version": "1.0.0",
+  "description": "Strip any article down to its sentences: a calm, typographic reading mode with no ads, no scripts and no network calls.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Lumen — read without the noise (Alt+R)"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+R"
+      }
+    }
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": true
+  }
+}
